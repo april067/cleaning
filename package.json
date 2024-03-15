@@ -1,0 +1,31 @@
+{
+  "name": "cleaning",
+  "version": "2.0.0",
+  "description": "",
+  "homepage": "https://april067.github.io/cleaning",
+  "scripts": {
+    "start": "parcel src/*.html",
+    "build": "parcel build src/*.html --public-url /cleaning/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/april067/cleaning.git"
+  },
+  "keywords": [],
+  "author": "IK Group",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/april067/cleaning/issues"
+  },
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "modern-normalize": "^2.0.0"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.12.0",
+    "parcel": "^2.12.0",
+    "parcel-reporter-clean-dist": "^1.0.4",
+    "posthtml-include": "^2.0.1"
+  },
+  "browserslist": "> 0.5%, last 2 versions, not dead"
+}
