@@ -1,20 +1,13 @@
 :root {
-  --main-text: 'DM Sans', sans-serif;
-  --title-text: 'Titan One', sans-serif;
+  --main-text-font: 'Roboto', sans-serif;
 
-  --main-color: #0029ff;
-  --secondary-color: #298cff;
-  --tertiary-color: #fcfcfc;
-  --quaternary-color: #131313;
-
-  // --accent-color: #f8d24e;
-  --accent-color: #0f00e0;
-  --accent-secondary-color: #cccccc;
-
-  --background-main-color: #54a3ff;
-  --background-secondary-color: #a4ceff;
-  --background-mob-menu-color: #0064d9;
-  --background-secondary-color-alfa50: rgba(163, 206, 255, 0.5);
+  --main-page-color: #ffffff;
+  --main-text-color: #211f54;
+  --secondary-text-color: #6e7191;
+  --accent-color: #0075ff;
+  --bg-color: #f7f9fc;
+  --feature1-color: #dcddeb;
+  --feature1-color: #edf5ff;
 
   --timing-fn: cubic-bezier(0.4, 0, 0.2, 1);
 }
