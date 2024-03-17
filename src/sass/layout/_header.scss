@@ -9,7 +9,7 @@
     @include adaptiveValue(padding-bottom, 16, 32, 320, 768);
   }
 
-  border: 1px dashed rgb(201, 34, 34);
+  // border: 1px dashed rgb(201, 34, 34);
 }
 
 .header .container {
@@ -19,20 +19,111 @@
 
   background-color: var(--main-page-color);
 
-  border: 1px dashed black;
+  // border: 1px dashed black;
+
+  @media screen and (max-width: 579px) {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 
 .nav {
   display: flex;
   align-items: center;
-  // width: 100%;
+
+  @media screen and (max-width: 959px) {
+    &::before {
+      content: '';
+
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 2;
+
+      width: 100%;
+      height: px2rem(122);
+
+      background-color: var(--main-page-color);
+    }
+  }
+
+  @media screen and (max-width: 579px) {
+    justify-content: space-between;
+    width: 100%;
+
+    &::before {
+      @include adaptiveValue(height, 142, 160, 320, 579);
+    }
+  }
 }
 
 .nav__list {
   display: flex;
   flex-wrap: wrap;
   gap: px2rem(22);
-  width: 100%;
   margin-left: px2rem(40);
-  margin-right: auto;
+  padding: 0;
+  margin: 0;
+
+  font-size: px2rem(18);
+  line-height: 166.666667%; /* 30/18 */
+  text-align: center;
+
+  color: var(--main-text-color);
+
+  @media screen and (max-width: 959px) {
+    position: fixed;
+    left: 50%;
+    top: 0;
+    // top: -100%;
+
+    display: block;
+    width: 100%;
+    max-width: px2rem(580);
+    height: 100vh;
+    padding: px2rem(22);
+    padding-top: 150px;
+    overflow: auto;
+
+    background-color: var(--accent-color);
+    color: var(--main-page-color);
+    box-shadow: 0 4px 10px 0 rgb(20, 20, 43, 0.7);
+
+    transform: translateX(-50%);
+  }
+
+  @media screen and (max-width: 579px) {
+    @include adaptiveValue(padding-top, 142, 160, 320, 579);
+  }
+
+  @media screen and (min-width: 960px) {
+    margin-left: px2rem(42);
+  }
+
+  //SERVICE TOOLS
+  @media screen and (max-width: 319px) {
+    background-color: red;
+  }
+}
+
+.nav__link {
+  display: inline-block;
+  padding: px2rem(12) 0;
+
+  @media screen and (max-width: 959px) {
+    display: block;
+    // padding: px2rem(22) 0;
+  }
+
+  &:hover,
+  &:focus {
+    @media screen and (max-width: 959px) {
+      box-shadow: 0 4px 10px 0 rgb(20, 20, 43, 0.5);
+    }
+
+    @media screen and (min-width: 960px) {
+      color: var(--accent-color);
+    }
+  }
 }
