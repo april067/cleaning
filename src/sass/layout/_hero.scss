@@ -1,0 +1,136 @@
+.hero .container {
+  position: relative;
+
+  display: flex;
+
+  @media screen and (max-width: 579px) {
+    display: block;
+  }
+  @media screen and (min-width: 580px) {
+    padding-right: 0;
+  }
+}
+
+.hero__half--left {
+  @media screen and (min-width: 580px) {
+    width: 46%;
+  }
+}
+
+.hero__img {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  @include adaptiveValue(width, 290, 720, 580, 1440);
+  height: auto;
+
+  @media screen and (max-width: 579px) {
+    position: static;
+
+    width: 100%;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: px2rem(720);
+  }
+}
+
+.hero__button {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.hero__title {
+  @include adaptiveValue(font-size, 22, 68, 320, 1440);
+  line-height: 108.823529%; /* 74/68 */
+  font-weight: bold;
+
+  @media screen and (min-width: 768px) {
+    @include adaptiveValue(margin-top, 0, 120, 768, 1200);
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-top: 228px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    margin-top: 228px;
+
+    font-size: px2rem(68);
+  }
+
+  @media screen and (max-width: 579px) {
+    text-align: center;
+  }
+}
+
+.hero__cover {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: px2rem(16);
+  @include adaptiveValue(margin-top, 10, 40, 320, 1440);
+
+  @media screen and (max-width: 579px) {
+    @include adaptiveValue(margin-bottom, 20, 40, 320, 1440);
+  }
+
+  @media screen and (min-width: 1440px) {
+    margin-top: px2rem(40);
+  }
+}
+
+.hero__phone {
+  display: flex;
+  align-items: center;
+
+  @media screen and (max-width: 579px) {
+    margin: 0 auto;
+  }
+}
+
+.hero__phone-icon {
+  width: px2rem(72);
+  height: px2rem(72);
+  border-radius: 50%;
+
+  outline: 1px solid var(--feature1-color);
+  box-shadow: 0 4px 10px 4 rgba(20, 20, 43, 0.04);
+
+  @media screen and (max-width: 767px) {
+    @include adaptiveValue(width, 40, 72, 320, 768);
+    @include adaptiveValue(height, 40, 72, 320, 768);
+  }
+}
+
+.hero__phone-block {
+  margin-left: px2rem(16);
+}
+
+.hero__phone-desc {
+  margin-bottom: px2rem(4);
+
+  @include adaptiveValue(font-size, 14, 16, 320, 1440);
+  line-height: 112.5%; /* 18/16 */
+  letter-spacing: px2rem(1.6);
+  text-transform: uppercase;
+  color: var(--secondary-text-color);
+
+  @media screen and (min-width: 1440px) {
+    font-size: px2rem(16);
+  }
+}
+
+.hero__phone-number {
+  @include adaptiveValue(font-size, 18, 28, 320, 1440);
+  line-height: 94.736842%; /* 36/38 */
+  font-weight: bold;
+
+  @media screen and (min-width: 1440px) {
+    font-size: px2rem(28);
+  }
+}

@@ -1,5 +1,6 @@
 .header {
-  position: fixed;
+  // position: fixed;
+  position: relative;
   top: 0;
 
   width: 100%;
@@ -32,15 +33,20 @@
     &::before {
       content: '';
 
-      position: fixed;
+      // position: fixed;
+      position: absolute;
       top: 0;
       left: 0;
       z-index: 2;
 
       width: 100%;
-      height: px2rem(122);
+      height: px2rem(118);
 
       background-color: var(--main-page-color);
+
+      @media screen and (max-width: 767px) {
+        @include adaptiveValue(height, 105, 118, 580, 768);
+      }
 
       //SERVICE TOOLS
       @media screen and (max-width: 319px) {
@@ -54,7 +60,7 @@
     width: 100%;
 
     &::before {
-      @include adaptiveValue(height, 142, 160, 320, 579);
+      @include adaptiveValue(height, 138, 160, 320, 579);
     }
   }
 }
@@ -79,6 +85,7 @@
     position: fixed;
     left: 50%;
     top: -100%;
+    z-index: 1;
 
     display: block;
     width: 100%;

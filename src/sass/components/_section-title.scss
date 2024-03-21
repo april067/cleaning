@@ -1,0 +1,24 @@
+.section-title {
+  font-size: px2rem(48);
+  line-height: 120.833333%; /* 58/48 */
+  font-weight: bold;
+
+  @media screen and (min-width: 1440px) {
+    font-size: px2rem(48);
+  }
+}
+
+.section-desc {
+  @include adaptiveValue(margin-top, 10, 20, 320, 1440);
+
+  @include adaptiveValue(font-size, 16, 21, 320, 1440);
+  @include adaptiveValue(line-height, 24, 30, 320, 1440);
+  color: var(--secondary-text-color);
+
+  @media screen and (min-width: 1440px) {
+    margin-top: px2rem(20);
+
+    font-size: px2rem(21);
+    line-height: px2rem(30);
+  }
+}
