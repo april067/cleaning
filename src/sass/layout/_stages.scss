@@ -1,4 +1,4 @@
-.service .container {
+.stages .container {
   @include adaptiveValue(padding-top, 100, 340, 580, 1440);
 
   @media screen and (min-width: 1440px) {
@@ -10,18 +10,18 @@
   }
 }
 
-.service .section-title,
-.service .section-desc {
+.stages .section-title,
+.stages .section-desc {
   text-align: center;
 }
 
-.service .section-desc {
+.stages .section-desc {
   max-width: px2rem(650);
   margin-left: auto;
   margin-right: auto;
 }
 
-.service__list {
+.stages__list {
   @media screen and (min-width: 580px) {
     display: flex;
     gap: px2rem(42);
@@ -31,35 +31,37 @@
   margin-bottom: px2rem(56);
 }
 
-.service__item {
+.stages__item {
   text-align: center;
 }
 
-.service__item:not(:last-child) {
+.stages__item:not(:last-child) {
   margin-bottom: px2rem(20);
 }
 
-.service__subtitle {
+.stages__subtitle {
   @include adaptiveValue(font-size, 20, 28, 320, 1440);
   font-weight: 700;
+  line-height: 128.571429%; /* 36/28 */
 
   @media screen and (min-width: 1440px) {
     font-size: px2rem(28);
   }
 }
 
-.service__desc {
+.stages__desc {
   @include adaptiveValue(margin-top, 4, 16, 320, 1440);
+
   @include adaptiveValue(font-size, 16, 21, 320, 1440);
 
   @media screen and (min-width: 1440px) {
-    font-size: px2rem(21);
-
     margin-top: px2rem(16);
+
+    font-size: px2rem(21);
   }
 }
 
-.service__img {
+.stages__img {
   display: inline-block;
   max-height: px2rem(240);
   width: auto;
@@ -69,7 +71,7 @@
   }
 }
 
-.service__buttons {
+.stages__buttons {
   display: flex;
   flex-direction: column;
   align-items: center;
