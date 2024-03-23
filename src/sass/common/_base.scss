@@ -31,6 +31,21 @@ main {
   @media screen and (min-width: 1440px) {
     padding: 0 px2rem(110);
   }
+}
 
-  // border: 1px dashed olive;
+.delimiter {
+  display: block;
+  min-width: 100%;
+  height: px2rem(1);
+  @include adaptiveValue(margin-top, 100, 240, 580, 1440);
+
+  background-color: var(--feature1-color);
+
+  @media screen and (min-width: 1440px) {
+    margin-top: px2rem(240);
+  }
+
+  @media screen and (max-width: 579px) {
+    margin-top: px2rem(100);
+  }
 }
