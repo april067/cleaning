@@ -1,6 +1,15 @@
+// @mixin adaptiveValue($property, $minSize, $maxSize, $minVW, $maxVW) {
+//   #{$property}: calc(
+//     $minSize * 1px + ($maxSize - $minSize) * (100vw - $minVW * 1px) /
+//       ($maxVW - $minVW)
+//   );
+// }
+
 @mixin adaptiveValue($property, $minSize, $maxSize, $minVW, $maxVW) {
   #{$property}: calc(
-    $minSize * 1px + ($maxSize - $minSize) * (100vw - $minVW * 1px) /
+    $minSize / 16 * 1rem + ($maxSize - $minSize) * (100vw - $minVW / 16 * 1rem) /
       ($maxVW - $minVW)
   );
 }
+
+// calc(($px / 16) * 1rem)

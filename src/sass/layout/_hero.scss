@@ -8,6 +8,7 @@
   }
   @media screen and (min-width: 580px) {
     padding-right: 0;
+    // @include adaptiveValue(padding-bottom, 100, 240, 580, 1440);
   }
 }
 
@@ -43,25 +44,25 @@
 }
 
 .hero__title {
-  @include adaptiveValue(font-size, 22, 68, 320, 1440);
+  @include adaptiveValue(font-size, 24, 68, 320, 1440);
   line-height: 108.823529%; /* 74/68 */
-  font-weight: bold;
+  font-weight: 700;
 
   @media screen and (min-width: 768px) {
     @include adaptiveValue(margin-top, 0, 120, 768, 1200);
   }
 
   @media screen and (min-width: 1200px) {
-    margin-top: 228px;
+    margin-top: px2rem(228);
   }
 
   @media screen and (min-width: 1440px) {
-    margin-top: 228px;
-
     font-size: px2rem(68);
   }
 
   @media screen and (max-width: 579px) {
+    margin-top: px2rem(30);
+
     text-align: center;
   }
 }
@@ -128,7 +129,7 @@
 .hero__phone-number {
   @include adaptiveValue(font-size, 18, 28, 320, 1440);
   line-height: 94.736842%; /* 36/38 */
-  font-weight: bold;
+  font-weight: 700;
 
   @media screen and (min-width: 1440px) {
     font-size: px2rem(28);
