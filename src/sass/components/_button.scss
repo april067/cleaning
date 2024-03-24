@@ -14,6 +14,9 @@
   background-color: var(--accent-color);
   box-shadow: 0 4px 10px 0 rgb(20, 20, 43, 0.4);
 
+  transition: color 250ms var(--timing-fn),
+    background-color 250ms var(--timing-fn);
+
   @media screen and (max-width: 959px) {
     // display: none;
   }
@@ -25,7 +28,7 @@
 
 .header__button:hover,
 .header__button:focus {
-  color: var(--accent-color);
+  color: var(--main-text-color);
   background-color: var(--main-page-color);
 }
 
@@ -50,10 +53,29 @@
   &.blue {
     color: var(--main-page-color);
     background-color: var(--accent-color);
+
+    transition: color 250ms var(--timing-fn),
+      background-color 250ms var(--timing-fn);
   }
 
   &.white {
     color: var(--main-text-color);
     background-color: var(--main-page-color);
+
+    transition: color 250ms var(--timing-fn),
+      background-color 250ms var(--timing-fn);
+  }
+}
+
+.main-button:hover,
+.main-button:focus {
+  &.blue {
+    color: var(--main-text-color);
+    background-color: var(--main-page-color);
+  }
+
+  &.white {
+    color: var(--main-page-color);
+    background-color: var(--accent-color);
   }
 }

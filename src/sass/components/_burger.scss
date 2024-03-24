@@ -19,6 +19,15 @@
   }
 }
 
+.burger__container:hover .burger__line,
+.burger__container:hover .burger__line::before,
+.burger__container:hover .burger__line::after,
+.burger__container:focus .burger__line,
+.burger__container:focus .burger__line::before,
+.burger__container:focus .burger__line::after {
+  background-color: var(--main-text-color);
+}
+
 #burger {
   display: none;
 }
