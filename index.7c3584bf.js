@@ -1,2 +1,0 @@
-!function(){console.log("// mob-menu file");let e=document.getElementById("burger"),n=document.getElementById("nav-list"),t=document.getElementById("burger-label"),c=document.querySelector("body");t.addEventListener("click",function(){e.checked||(n.classList.add("nav__open"),c.classList.add("menu-open")),e.checked&&(n.classList.remove("nav__open"),c.classList.remove("menu-open"))})}();
-//# sourceMappingURL=index.7c3584bf.js.map
