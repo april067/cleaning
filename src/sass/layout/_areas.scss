@@ -1,0 +1,115 @@
+.areas .container {
+  @include adaptiveValue(padding-top, 100, 240, 580, 1440);
+  @include adaptiveValue(padding-bottom, 100, 240, 580, 1440);
+
+  @media screen and (max-width: 579px) {
+    padding-top: px2rem(100);
+    padding-bottom: px2rem(100);
+  }
+
+  @media screen and (min-width: 660px) {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  @media screen and (min-width: 1440px) {
+    padding-top: px2rem(240);
+    padding-bottom: px2rem(240);
+  }
+}
+
+.areas__part {
+  @media screen and (max-width: 659px) {
+    padding: px2rem(16);
+  }
+
+  @media screen and (min-width: 660px) {
+    @include adaptiveValue(padding-top, 10, 60, 660, 1440);
+    @include adaptiveValue(padding-bottom, 10, 60, 660, 1440);
+    @include adaptiveValue(padding-left, 10, 80, 660, 1440);
+    padding-right: 0;
+  }
+
+  @media screen and (min-width: 1440px) {
+    padding: px2rem(60) 0 px2rem(60) px2rem(80);
+  }
+}
+
+.areas__title.section-title {
+  @include adaptiveValue(font-size, 28, 48, 660, 1440);
+
+  @media screen and (max-width: 659px) {
+    max-width: 360px;
+    margin: 0 auto;
+
+    text-align: center;
+
+    @include adaptiveValue(font-size, 24, 48, 320, 1440);
+  }
+
+  @media screen and (min-width: 1440px) {
+    font-size: px2rem(48);
+  }
+}
+
+.areas__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: px2rem(26);
+  row-gap: 12px;
+
+  @include adaptiveValue(margin-bottom, 16, 48, 320, 1440);
+
+  @media screen and (max-width: 659px) {
+    @include adaptiveValue(padding-left, 0, 100, 320, 659);
+  }
+
+  @media screen and (min-width: 1440px) {
+    margin-bottom: px2rem(48);
+    padding-left: px2rem(100);
+  }
+}
+
+.areas__item {
+  display: flex;
+  align-items: center;
+  width: 50%;
+}
+
+.areas__item p {
+  margin-left: px2rem(8);
+
+  @include adaptiveValue(font-size, 14, 18, 320, 1440);
+  line-height: 111.111111%; /* 20/18 */
+  font-weight: 700;
+
+  @media screen and (min-width: 1440px) {
+    font-size: px2rem(18);
+  }
+}
+
+.areas__icon {
+  width: px2rem(26);
+  height: px2rem(26);
+}
+
+.areas__button {
+  @media screen and (max-width: 659px) {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.areas__part--img {
+  display: flex;
+  margin-top: px2rem(20);
+
+  @media screen and (min-width: 660px) {
+    min-width: 50%;
+    margin-top: 0;
+  }
+}
+
+.areas__img {
+  width: 100%;
+}
