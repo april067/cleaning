@@ -1,0 +1,121 @@
+.advantages .container {
+  @media screen and (min-width: 660px) {
+    display: flex;
+  }
+}
+
+.advantages__cover.container {
+  @include adaptiveValue(padding-top, 100, 240, 580, 1440);
+
+  @media screen and (max-width: 579px) {
+    padding-top: px2rem(100);
+  }
+
+  @media screen and (min-width: 1440px) {
+    padding: px2rem(240) px2rem(110) 0;
+  }
+}
+
+.advantages__part {
+  @media screen and (max-width: 659px) {
+    padding: px2rem(16);
+  }
+
+  @media screen and (min-width: 660px) {
+    @include adaptiveValue(padding-top, 10, 24, 660, 1440);
+    @include adaptiveValue(padding-bottom, 10, 24, 660, 1440);
+    @include adaptiveValue(padding-right, 10, 38, 660, 1440);
+    padding-left: 0;
+  }
+
+  @media screen and (min-width: 1440px) {
+    padding: px2rem(24) px2rem(38) px2rem(24) 0;
+  }
+}
+
+.advantages__title.section-title {
+  max-width: 350px;
+
+  @media screen and (max-width: 659px) {
+    margin: 0 auto;
+
+    text-align: center;
+  }
+}
+
+.advantages__text {
+  margin-top: px2rem(15);
+
+  font-size: px2rem(12);
+  line-height: 250%; /* 30/12 */
+}
+
+.advantages__list {
+  display: flex;
+  justify-content: space-between;
+  max-width: px2rem(320);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: px2rem(26);
+  @include adaptiveValue(margin-bottom, 16, 48, 320, 1440);
+
+  @media screen and (min-width: 660px) {
+    max-width: px2rem(428);
+  }
+
+  @media screen and (min-width: 1440px) {
+    margin-bottom: px2rem(48);
+  }
+}
+
+.advantages__point {
+  @include adaptiveValue(font-size, 30, 54, 320, 1440);
+  line-height: 122.222222%; /* 66/54 */
+
+  @media screen and (min-width: 1440px) {
+    font-size: px2rem(54);
+  }
+}
+
+.advantages__number {
+  font-weight: 700;
+}
+
+.advantages__plus {
+  color: var(--accent-color);
+}
+
+.advantages__caption {
+  @include adaptiveValue(font-size, 14, 18, 320, 1440);
+  line-height: 133.333333%; /* 24/18 */
+  color: var(--secondary-text-color);
+
+  @media screen and (min-width: 1440px) {
+    font-size: px2rem(18);
+  }
+}
+
+.advantages__button {
+  @media screen and (max-width: 659px) {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.advantages__part--img {
+  display: flex;
+  margin-top: px2rem(20);
+
+  @media screen and (min-width: 660px) {
+    min-width: 50%;
+    margin-top: 0;
+  }
+}
+
+.advantages__img {
+  width: 100%;
+}
+
+.advantages__delimiter.delimiter {
+  margin-top: 0;
+}
