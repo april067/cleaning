@@ -1,0 +1,205 @@
+.pages .container {
+  @include adaptiveValue(padding-top, 100, 240, 580, 1440);
+  @include adaptiveValue(padding-bottom, 100, 240, 580, 1440);
+
+  @media screen and (min-width: 1440px) {
+    padding-top: px2rem(240);
+    padding-bottom: px2rem(240);
+  }
+
+  @media screen and (max-width: 579px) {
+    padding-top: px2rem(100);
+    padding-bottom: px2rem(100);
+  }
+}
+
+.pages__heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: px2rem(20);
+
+  @media screen and (min-width: 660px) {
+    flex-direction: row;
+    align-items: start;
+  }
+
+  @media screen and (min-width: 1024px) {
+    align-items: center;
+  }
+}
+
+.pages__cover {
+  @media screen and (min-width: 1024px) {
+    padding-right: px2rem(20);
+  }
+}
+
+.pages__title.section-title {
+  text-align: center;
+
+  @media screen and (min-width: 660px) {
+    text-align: left;
+  }
+}
+
+.pages__buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  margin-top: px2rem(28);
+
+  @media screen and (min-width: 660px) {
+    min-width: 50%;
+    margin: 0;
+  }
+
+  @media screen and (min-width: 768px) {
+    min-width: 52%;
+  }
+
+  @media screen and (min-width: 1024px) {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+}
+
+.pages__list {
+  @media screen and (min-width: 660px) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+.pages__item {
+  @media screen and (max-width: 659px) {
+    &:not(:last-child) {
+      margin-bottom: px2rem(28);
+    }
+  }
+
+  @media screen and (min-width: 660px) {
+    width: calc((100% - px2rem(28)) / 2);
+  }
+}
+
+.pages__item:nth-child(1) .article {
+  background-image: url('../img/pages-1.png');
+}
+
+.pages__item:nth-child(2) .article {
+  background-image: url('../img/pages-2.png');
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  @include adaptiveValue(padding-left, 10, 30, 320, 1440);
+  @include adaptiveValue(padding-right, 10, 30, 320, 1440);
+
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @media screen and (min-width: 1440px) {
+    padding-left: px2rem(30);
+    padding-right: px2rem(30);
+  }
+}
+
+.pages__transparent {
+  @include adaptiveValue(height, 170, 340, 320, 659);
+
+  @media screen and (min-width: 660px) {
+    @include adaptiveValue(height, 150, 340, 660, 1440);
+  }
+
+  @media screen and (min-width: 1440px) {
+    height: px2rem(340);
+  }
+}
+
+.article__block {
+  border-radius: 12px;
+  @include adaptiveValue(padding, 10, 50, 320, 1440);
+
+  background-color: var(--main-page-color);
+  box-shadow: 0 2px 6px 0 rgba(20, 20, 43, 0.15);
+
+  @media screen and (min-width: 660px) {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    border-radius: 24px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    padding: px2rem(50);
+  }
+}
+
+.article__head {
+  @include adaptiveValue(font-size, 18, 24, 320, 1440);
+  line-height: 141.666667%; /* 34/24 */
+  font-weight: 700;
+
+  @media screen and (min-width: 1440px) {
+    font-size: px2rem(24);
+  }
+}
+
+.article__text {
+  margin-top: px2rem(20);
+
+  @include adaptiveValue(font-size, 16, 21, 320, 1440);
+  @include adaptiveValue(line-height, 24, 30, 320, 1440);
+  color: var(--secondary-text-color);
+
+  @media screen and (min-width: 660px) {
+    flex-grow: 1;
+  }
+
+  @media screen and (min-width: 1440px) {
+    font-size: px2rem(21);
+    line-height: px2rem(30);
+  }
+}
+
+.article__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: px2rem(26);
+}
+
+.article__date {
+  @include adaptiveValue(font-size, 14, 18, 320, 1440);
+  line-height: 111.111111%; /* 20/18 */
+  font-weight: 700;
+
+  @media screen and (min-width: 1440px) {
+    font-size: px2rem(18);
+  }
+}
+
+.article__button {
+  @include adaptiveValue(width, 20, 50, 320, 1440);
+  @include adaptiveValue(height, 20, 50, 320, 1440);
+
+  background-color: var(--accent-color);
+  border: 4px solid var(--accent-color);
+
+  transition: background-color 250ms var(--timing-fn);
+
+  @media screen and (min-width: 1440px) {
+    width: px2rem(50);
+    height: px2rem(50);
+  }
+
+  &:hover,
+  &:focus {
+    background-color: var(--main-page-color);
+  }
+}

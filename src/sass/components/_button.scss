@@ -17,10 +17,6 @@
   transition: color 250ms var(--timing-fn),
     background-color 250ms var(--timing-fn);
 
-  @media screen and (max-width: 959px) {
-    // display: none;
-  }
-
   @media screen and (min-width: 580px) {
     margin-left: auto;
   }
