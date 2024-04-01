@@ -4,18 +4,6 @@
   }
 }
 
-.advantages__cover.container {
-  @include adaptiveValue(padding-top, 100, 240, 580, 1440);
-
-  @media screen and (max-width: 579px) {
-    padding-top: px2rem(100);
-  }
-
-  @media screen and (min-width: 1440px) {
-    padding: px2rem(240) px2rem(110) 0;
-  }
-}
-
 .advantages__part {
   @media screen and (max-width: 659px) {
     padding: px2rem(16);

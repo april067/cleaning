@@ -35,6 +35,30 @@ main {
   @media screen and (min-width: 1440px) {
     padding: 0 px2rem(110);
   }
+
+  &.top {
+    @include adaptiveValue(padding-top, 100, 240, 580, 1440);
+
+    @media screen and (max-width: 579px) {
+      padding-top: px2rem(100);
+    }
+
+    @media screen and (min-width: 1440px) {
+      padding-top: px2rem(240);
+    }
+  }
+
+  &.bottom {
+    @include adaptiveValue(padding-bottom, 100, 240, 580, 1440);
+
+    @media screen and (max-width: 579px) {
+      padding-bottom: px2rem(100);
+    }
+
+    @media screen and (min-width: 1440px) {
+      padding-bottom: px2rem(240);
+    }
+  }
 }
 
 .delimiter {

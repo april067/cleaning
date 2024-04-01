@@ -1,20 +1,7 @@
 .areas .container {
-  @include adaptiveValue(padding-top, 100, 240, 580, 1440);
-  @include adaptiveValue(padding-bottom, 100, 240, 580, 1440);
-
-  @media screen and (max-width: 579px) {
-    padding-top: px2rem(100);
-    padding-bottom: px2rem(100);
-  }
-
   @media screen and (min-width: 660px) {
     display: flex;
     flex-direction: row-reverse;
-  }
-
-  @media screen and (min-width: 1440px) {
-    padding-top: px2rem(240);
-    padding-bottom: px2rem(240);
   }
 }
 

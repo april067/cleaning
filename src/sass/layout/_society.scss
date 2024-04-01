@@ -73,8 +73,6 @@
 }
 
 .society__phone {
-  display: flex;
-  align-items: center;
   margin: 0 auto;
 }
 
@@ -85,55 +83,25 @@
 }
 
 .society__phone-icon {
-  width: px2rem(72);
-  height: px2rem(72);
-  border-radius: 50%;
-
   background-color: var(--main-page-color);
 
   transition: outline-color 250ms var(--timing-fn),
     background-color 250ms var(--timing-fn);
-
-  @media screen and (max-width: 767px) {
-    @include adaptiveValue(width, 40, 72, 320, 768);
-    @include adaptiveValue(height, 40, 72, 320, 768);
-  }
-}
-
-.society__phone-block {
-  margin-left: px2rem(16);
 }
 
 .society__phone-desc {
-  margin-bottom: px2rem(4);
-
-  @include adaptiveValue(font-size, 14, 16, 320, 1440);
-  line-height: 112.5%; /* 18/16 */
-  letter-spacing: px2rem(1.6);
-  text-transform: uppercase;
   color: var(--main-page-color);
-
-  @media screen and (min-width: 1440px) {
-    font-size: px2rem(16);
-  }
 }
 
 .society__phone-number {
   border-bottom: solid 1px transparent;
 
-  @include adaptiveValue(font-size, 18, 28, 320, 1440);
-  line-height: 94.736842%; /* 36/38 */
-  font-weight: 700;
-
   transition: border-bottom-color 250ms var(--timing-fn);
-
-  @media screen and (min-width: 1440px) {
-    font-size: px2rem(28);
-  }
 
   &:hover,
   &:focus {
     border-bottom: solid 1px var(--main-page-color);
+    color: inherit; //interrupt .phone__number
   }
 }
 

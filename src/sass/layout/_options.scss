@@ -1,18 +1,3 @@
-.options .container {
-  @include adaptiveValue(padding-top, 100, 240, 580, 1440);
-  @include adaptiveValue(padding-bottom, 100, 240, 580, 1440);
-
-  @media screen and (min-width: 1440px) {
-    padding-top: px2rem(240);
-    padding-bottom: px2rem(240);
-  }
-
-  @media screen and (max-width: 579px) {
-    padding-top: px2rem(100);
-    padding-bottom: px2rem(100);
-  }
-}
-
 .options__head {
   display: flex;
   flex-direction: column;
