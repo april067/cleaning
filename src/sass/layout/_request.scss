@@ -123,6 +123,7 @@
   border: none;
   border-radius: 6px;
 
+  color: var(--secondary-text-color);
   box-shadow: 0 2px 12px 0 rgb(20, 20, 43, 0.1);
 
   @media screen and (min-width: 732px) {
@@ -144,6 +145,7 @@
 
 .request__textarea {
   height: px2rem(144);
+  padding: px2rem(10) px2rem(10);
 }
 
 .request__button {
@@ -164,12 +166,5 @@
 
   @media screen and (min-width: 768px) {
     width: px2rem(256);
-  }
-}
-
-.request__button--submit {
-  // align-self: center;
-
-  @media screen and (max-width: 731px) {
   }
 }

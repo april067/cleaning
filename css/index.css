@@ -1786,6 +1786,7 @@ main {
   margin-top: 0.25rem;
   border: none;
   border-radius: 6px;
+  color: var(--secondary-text-color);
   -webkit-box-shadow: 0 2px 12px 0 rgba(20, 20, 43, 0.1);
           box-shadow: 0 2px 12px 0 rgba(20, 20, 43, 0.1);
 }
@@ -1812,6 +1813,7 @@ main {
 
 .request__textarea {
   height: 9rem;
+  padding: 0.625rem 0.625rem;
 }
 
 @media screen and (max-width: 731px) {
