@@ -147,14 +147,14 @@ main {
   margin-top: calc(6.25rem + 140 * (100vw - 36.25rem) / 860);
   background-color: var(--feature1-color);
 }
-@media screen and (min-width: 1440px) {
-  .delimiter {
-    margin-top: 15rem;
-  }
-}
 @media screen and (max-width: 579px) {
   .delimiter {
     margin-top: 6.25rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .delimiter {
+    margin-top: 15rem;
   }
 }
 
@@ -213,6 +213,7 @@ main {
   .main-button {
     width: 10.875rem;
     padding: 1.125rem 0;
+    border-radius: 8px;
     text-align: center;
     font-weight: 400;
   }
@@ -1814,6 +1815,7 @@ main {
 .request__textarea {
   height: 9rem;
   padding: 0.625rem 0.625rem;
+  resize: none;
 }
 
 @media screen and (max-width: 731px) {
@@ -1834,6 +1836,259 @@ main {
 @media screen and (min-width: 768px) {
   .request__button--browse {
     width: 16rem;
+  }
+}
+
+.contacts {
+  padding-top: calc(3.75rem + 80 * (100vw - 36.25rem) / 860);
+  font-size: calc(0.875rem + 4 * (100vw - 20rem) / 1120);
+  line-height: 166.666667%; /* 30/18 */
+  color: var(--secondary-text-color);
+}
+@media screen and (max-width: 579px) {
+  .contacts {
+    padding-top: 3.75rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .contacts {
+    padding-top: 8.75rem;
+    font-size: 1.125rem;
+  }
+}
+
+.contacts .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+}
+@media screen and (min-width: 660px) {
+  .contacts .container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .contacts .container {
+    gap: calc(1.25rem + 20 * (100vw - 80rem) / 160);
+  }
+}
+@media screen and (min-width: 1440px) {
+  .contacts .container {
+    gap: 2.5rem;
+  }
+}
+
+.contacts__head,
+.contacts__address,
+.contacts__schedule,
+.contacts__call {
+  padding-left: calc(0rem + 100 * (100vw - 20rem) / 339);
+  padding-right: calc(0rem + 100 * (100vw - 20rem) / 339);
+}
+@media screen and (min-width: 660px) {
+  .contacts__head,
+  .contacts__address,
+  .contacts__schedule,
+  .contacts__call {
+    padding-left: calc(0rem + 100 * (100vw - 41.25rem) / 619);
+    padding-right: calc(0rem + 100 * (100vw - 41.25rem) / 619);
+  }
+}
+@media screen and (min-width: 660px) {
+  .contacts__head,
+  .contacts__address,
+  .contacts__schedule,
+  .contacts__call {
+    width: calc((100% - 2.5rem) / 2);
+  }
+}
+@media screen and (min-width: 1280px) {
+  .contacts__head,
+  .contacts__address,
+  .contacts__schedule,
+  .contacts__call {
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .contacts__head,
+  .contacts__address,
+  .contacts__call {
+    width: calc(17.9375rem + 13 * (100vw - 80rem) / 160);
+  }
+}
+@media screen and (min-width: 1440px) {
+  .contacts__head,
+  .contacts__address,
+  .contacts__call {
+    width: 18.75rem;
+  }
+}
+
+.contacts__address {
+  font-style: normal;
+}
+
+@media screen and (min-width: 1280px) {
+  .contacts__schedule {
+    width: calc(9.4375rem + 13 * (100vw - 80rem) / 160);
+  }
+}
+@media screen and (min-width: 1440px) {
+  .contacts__schedule {
+    width: 10.25rem;
+  }
+}
+
+.contacts__title,
+.contacts__subtitle {
+  font-size: calc(1.125rem + 2 * (100vw - 20rem) / 1120);
+  line-height: 110%; /* 22/20 */
+  font-weight: 700;
+  color: var(--main-text-color);
+}
+@media screen and (max-width: 659px) {
+  .contacts__title,
+  .contacts__subtitle {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .contacts__title,
+  .contacts__subtitle {
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .contacts__title {
+    font-size: calc(1.125rem + 10 * (100vw - 20rem) / 1120);
+    line-height: 128.571429%; /* 36/28 */
+  }
+}
+@media screen and (min-width: 1440px) {
+  .contacts__title {
+    font-size: 1.75rem;
+  }
+}
+
+.contacts__subtitle {
+  margin-bottom: 1.75rem;
+}
+
+.contacts__desc {
+  margin-top: 0.5rem;
+  margin-bottom: 2.125rem;
+}
+
+.contacts__icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+@media screen and (max-width: 1279px) {
+  .contacts__icons {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.contacts__icon {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 8px;
+  background-color: var(--feature2-color);
+}
+
+.contacts__phone-number {
+  margin-top: 1.125rem;
+  margin-bottom: 1.125rem;
+}
+
+.contacts__email {
+  -webkit-transition: color 250ms var(--timing-fn);
+  transition: color 250ms var(--timing-fn);
+}
+.contacts__email:hover, .contacts__email:focus {
+  color: var(--accent-color);
+}
+
+.schedule__item:first-child {
+  margin-bottom: 1.125rem;
+}
+
+.contacts__days {
+  margin-bottom: 0.5rem;
+  font-size: calc(1rem + 2 * (100vw - 20rem) / 1120);
+  line-height: 111.111111%; /* 20/18 */
+  font-weight: 700;
+  color: var(--main-text-color);
+}
+@media screen and (min-width: 1440px) {
+  .contacts__days {
+    font-size: 1.125rem;
+  }
+}
+
+.contacts__phone {
+  border-bottom: solid 1px transparent;
+  font-size: calc(1.125rem + 10 * (100vw - 20rem) / 1120);
+  line-height: 128.571429%; /* 36/28 */
+  font-weight: 700;
+  color: var(--accent-color);
+  -webkit-transition: border-bottom-color 250ms var(--timing-fn);
+  transition: border-bottom-color 250ms var(--timing-fn);
+}
+.contacts__phone:hover, .contacts__phone:focus {
+  border-bottom: solid 1px var(--accent-color);
+}
+@media screen and (min-width: 1440px) {
+  .contacts__phone {
+    font-size: 1.75rem;
+  }
+}
+
+.contacts__details {
+  margin-top: 0.375rem;
+  margin-bottom: 1.125rem;
+}
+
+.contacts__button {
+  width: 13.75rem;
+}
+@media screen and (min-width: 768px) {
+  .contacts__button {
+    width: 16rem;
+  }
+}
+
+.delimiter {
+  margin-top: calc(3.75rem + 80 * (100vw - 36.25rem) / 860);
+}
+@media screen and (max-width: 579px) {
+  .delimiter {
+    margin-top: 3.75rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .delimiter {
+    margin-top: 8.75rem;
   }
 }
 

@@ -1,0 +1,226 @@
+.contacts {
+  @include adaptiveValue(padding-top, 60, 140, 580, 1440);
+
+  @include adaptiveValue(font-size, 14, 18, 320, 1440);
+  line-height: 166.666667%; /* 30/18 */
+  color: var(--secondary-text-color);
+
+  @media screen and (max-width: 579px) {
+    padding-top: px2rem(60);
+  }
+
+  @media screen and (min-width: 1440px) {
+    padding-top: px2rem(140);
+
+    font-size: px2rem(18);
+  }
+}
+.contacts .container {
+  display: flex;
+  flex-direction: column;
+  gap: px2rem(40);
+
+  @media screen and (min-width: 660px) {
+    flex-direction: row;
+    align-items: baseline;
+    flex-wrap: wrap;
+  }
+
+  @media screen and (min-width: 1280px) {
+    // gap: px2rem(20);
+    @include adaptiveValue(gap, 20, 40, 1280, 1440);
+  }
+
+  @media screen and (min-width: 1440px) {
+    gap: px2rem(40);
+  }
+}
+
+.contacts__head,
+.contacts__address,
+.contacts__schedule,
+.contacts__call {
+  @include adaptiveValue(padding-left, 0, 100, 320, 659);
+  @include adaptiveValue(padding-right, 0, 100, 320, 659);
+
+  @media screen and (min-width: 660px) {
+    @include adaptiveValue(padding-left, 0, 100, 660, 1279);
+    @include adaptiveValue(padding-right, 0, 100, 660, 1279);
+  }
+
+  @media screen and (min-width: 660px) {
+    width: calc((100% - px2rem(40)) / 2);
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding: 0;
+  }
+}
+
+.contacts__head,
+.contacts__address,
+.contacts__call {
+  @media screen and (min-width: 1280px) {
+    @include adaptiveValue(width, 287, 300, 1280, 1440);
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: px2rem(300);
+  }
+}
+
+.contacts__head {
+  // width: px2rem(287);
+}
+
+.contacts__address {
+  // width: px2rem(287);
+
+  font-style: normal;
+}
+
+.contacts__schedule {
+  @media screen and (min-width: 1280px) {
+    @include adaptiveValue(width, 151, 164, 1280, 1440);
+    // width: px2rem(151);
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: px2rem(164);
+  }
+}
+
+.contacts__call {
+  // width: px2rem(287);
+}
+
+.contacts__title,
+.contacts__subtitle {
+  @include adaptiveValue(font-size, 18, 20, 320, 1440);
+  line-height: 110%; /* 22/20 */
+  font-weight: 700;
+  color: var(--main-text-color);
+
+  @media screen and (max-width: 659px) {
+    text-align: center;
+  }
+
+  @media screen and (min-width: 1440px) {
+    font-size: px2rem(20);
+  }
+}
+
+.contacts__title {
+  @media screen and (min-width: 1280px) {
+    @include adaptiveValue(font-size, 18, 28, 320, 1440);
+    line-height: 128.571429%; /* 36/28 */
+  }
+
+  @media screen and (min-width: 1440px) {
+    font-size: px2rem(28);
+  }
+}
+
+.contacts__subtitle {
+  margin-bottom: px2rem(28);
+}
+
+.contacts__desc {
+  margin-top: px2rem(8);
+  margin-bottom: px2rem(34);
+}
+
+.contacts__icons {
+  display: flex;
+  gap: px2rem(16);
+
+  @media screen and (max-width: 1279px) {
+    justify-content: center;
+  }
+}
+
+.contacts__icon {
+  width: px2rem(36);
+  height: px2rem(36);
+  border-radius: 8px;
+
+  background-color: var(--feature2-color);
+}
+
+.contacts__phone-number {
+  margin-top: px2rem(18);
+  margin-bottom: px2rem(18);
+}
+
+.contacts__email {
+  transition: color 250ms var(--timing-fn);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.schedule__item {
+  &:first-child {
+    margin-bottom: px2rem(18);
+  }
+}
+
+.contacts__days {
+  margin-bottom: px2rem(8);
+
+  @include adaptiveValue(font-size, 16, 18, 320, 1440);
+  line-height: 111.111111%; /* 20/18 */
+  font-weight: 700;
+  color: var(--main-text-color);
+
+  @media screen and (min-width: 1440px) {
+    font-size: px2rem(18);
+  }
+}
+
+.contacts__phone {
+  border-bottom: solid 1px transparent;
+
+  @include adaptiveValue(font-size, 18, 28, 320, 1440);
+  line-height: 128.571429%; /* 36/28 */
+  font-weight: 700;
+  color: var(--accent-color);
+
+  transition: border-bottom-color 250ms var(--timing-fn);
+
+  &:hover,
+  &:focus {
+    border-bottom: solid 1px var(--accent-color);
+  }
+
+  @media screen and (min-width: 1440px) {
+    font-size: px2rem(28);
+  }
+}
+
+.contacts__details {
+  margin-top: px2rem(6);
+  margin-bottom: px2rem(18);
+}
+
+.contacts__button {
+  width: px2rem(220);
+
+  @media screen and (min-width: 768px) {
+    width: px2rem(256);
+  }
+}
+
+.delimiter {
+  @include adaptiveValue(margin-top, 60, 140, 580, 1440);
+
+  @media screen and (max-width: 579px) {
+    margin-top: px2rem(60);
+  }
+
+  @media screen and (min-width: 1440px) {
+    margin-top: px2rem(140);
+  }
+}

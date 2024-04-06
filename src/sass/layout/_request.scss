@@ -146,6 +146,7 @@
 .request__textarea {
   height: px2rem(144);
   padding: px2rem(10) px2rem(10);
+  resize: none;
 }
 
 .request__button {

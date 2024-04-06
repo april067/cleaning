@@ -69,11 +69,11 @@ main {
 
   background-color: var(--feature1-color);
 
-  @media screen and (min-width: 1440px) {
-    margin-top: px2rem(240);
-  }
-
   @media screen and (max-width: 579px) {
     margin-top: px2rem(100);
+  }
+
+  @media screen and (min-width: 1440px) {
+    margin-top: px2rem(240);
   }
 }
